@@ -1,0 +1,62 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+
+# Virtual environment
+venv/
+env/
+*.env
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Log files
+*.log
+
+# Unit test / coverage reports
+*.cover
+*.coverage
+*.hypothesis/
+nosetests.xml
+coverage.xml
+*.coveragerc
+*.tox/
+
+# PyInstaller
+#  Uncomment the line below if you use PyInstaller for packaging
+# /dist/
+# /build/
+# *.spec
+
+# Flask / Django / FastAPI
+*.sqlite3
+db.sqlite3
+*.log
+instance/
+*.pid
+
+# Pytest
+.cache/
+*.cache/
+
+# Environment variables
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
