@@ -1,14 +1,26 @@
+"""
+Utility functions for the application.
+"""
 import uuid
-from .models import TransformedString, Payload
+
+from .models import TransformedString
 
 
 def transformer_function(string: str) -> str:
-    """Simulates an external service transforming strings."""
+    """
+    Simulates an external service transforming strings.
+    """
     return string.upper()
 
 
 def cache_transformed_strings(session, strings):
-    """Cache transformed strings or retrieve from cache."""
+    """
+    Cache transformed strings or retrieve them from the cache.
+
+    This function checks whether a string has been transformed previously.
+    If so, it returns the cached result. Otherwise, it transforms the string
+    and stores the result in the database for future use.
+    """
     results = []
     for string in strings:
         cached = session.query(TransformedString).filter_by(input_value=string).first()
@@ -25,5 +37,7 @@ def cache_transformed_strings(session, strings):
 
 
 def generate_payload_id() -> str:
-    """Generates a unique payload identifier."""
+    """
+    Generates a unique payload identifier.
+    """
     return str(uuid.uuid4())
